@@ -38,6 +38,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "locco": "git://github.com/xaviervia/locco.git"
+    "locco": "git://github.com/xaviervia/locco.git#0.0.2"
   }
 }
