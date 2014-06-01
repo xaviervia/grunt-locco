@@ -38,6 +38,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "locco": "0.0.3"
+    "locco": "0.1.1"
   }
 }
