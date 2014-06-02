@@ -1,7 +1,7 @@
 {
   "name": "grunt-locco",
   "description": "A Grunt plugin for generating locco documentation",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/xavier/grunt-locco",
   "author": {
     "name": "Xavier Via",
@@ -38,6 +38,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "locco": "0.0.3"
+    "locco": "0.1.1"
   }
 }

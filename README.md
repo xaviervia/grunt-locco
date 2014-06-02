@@ -28,7 +28,22 @@ grunt.initConfig({
   locco: {
     all: {
       // Put here the patterns of files to be parsed for documentation
-      src: ["lib/**/*.js"]
+      src: ["lib/**/*.js"],
+
+      // Options object, exactly the same as locco's second argument
+      options: {
+
+        // Sets the output folder for documentation. Default: doc
+        output: "docs",
+
+        // If true, copies the full folder structure into the output folder
+        // If false, copies the folder structure from the first wildcard. For
+        // example, if the pattern "tasks/**/*.js" is used and a
+        // "tasks/deep/file.js" is matched, the output file will be
+        // "doc/deep/file.js".
+        includeBase: false
+
+      }
     },
   },
 });
@@ -41,3 +56,9 @@ To make documentation for a target, run from the shell:
 ```js
 grunt locco:all
 ```
+
+## License
+
+Copyright (c) 2014 Xavier Via
+
+[MIT license](LICENSE-MIT)
