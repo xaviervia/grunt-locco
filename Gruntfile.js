@@ -16,7 +16,10 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     locco: {
       main: {
-        src: ["tasks/*.js"]
+        src: ["tasks/*.js"],
+        options: {
+          includeBase: true
+        }
       }
     }
 

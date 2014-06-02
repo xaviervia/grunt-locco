@@ -1,10 +1,11 @@
-/*
- * grunt-locco
- * https://github.com/xavier/grunt-locco
- *
- * Copyright (c) 2014 Xavier Via
- * Licensed under the MIT license.
- */
+//
+// [grunt-locco](https://github.com/xavier/grunt-locco)
+// ====================================================
+//
+// > Copyright (c) 2014 Xavier Via
+// >
+// > Licensed under the MIT license.
+//
 
 'use strict'
 
@@ -24,6 +25,21 @@ module.exports = function(grunt) {
   //     all: {
   //       // Put here the patterns of files to be parsed for documentation
   //       src: ["lib/**/*.js"]
+  //
+  //       // Options object, exactly the same as locco's second argument
+  //       options: {
+  //
+  //         // Sets the output folder for documentation. Default: doc
+  //         output: "docs",
+  //
+  //         // If true, copies the full folder structure into the output folder
+  //         // If false, copies the folder structure from the first wildcard. For
+  //         // example, if the pattern "tasks/**/*.js" is used and a
+  //         // "tasks/deep/file.js" is matched, the output file will be
+  //         // "doc/deep/file.js".
+  //         includeBase: false
+  //
+  //       }
   //     },
   //   },
   // });
@@ -33,13 +49,15 @@ module.exports = function(grunt) {
     'A Grunt plugin for creating locco documentation',
     function() {
 
+    var options = this.data.options
+
     // Runs locco for each pattern
     this.data.src.forEach(function (pattern) {
       grunt.log.writeln(
         "Generating locco documentation for files matching " +
         pattern + " ..." )
 
-      var files = locco(pattern)
+      var files = locco(pattern, options)
 
       grunt.log.writeln("Generated documentation for:")
       files.forEach(function (file) {
